@@ -1,25 +1,24 @@
-<form (submit)="login($event)">
-  <div class="imput">
+<div class="col-lg-6">
+<form (submit)="login($event)" class="col-lg-7">
+  <p>
     <label for="">Username</label>
-    <input type="text" placeholder="login">
-
-  </div>
-  <div class="imput">
+    <input type="text" placeholder="userName" class="form-control" required>
+  </p>
+  <p>
     <label for="">Password</label>
-    <input type="password" placeholder="password" >
-    
-  </div>
-  <div class="imput">
+    <input type="password" placeholder="password" class="form-control" required >
+  </p>  
+  <div style="text-align:center">
     <!--<button type="text" value="Login">LOGIN</button> -->
     <!--<button (click)="login($event)">LOGIN</button>-->
-    <input type="submit" value="LOGIN" [routerLink]="['/principal']">
-     
+      <input type="submit" value="LOGIN" [routerLink]="['/home']">
+   
   </div>
   <div>
     <p>{{usuario.nombre}}</p>
-    
   </div>
 </form>
+</div>
 
 
 
