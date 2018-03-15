@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from './user';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  public usuario:User;
+
+  constructor() {   
+      this.usuario = new User("Max","Choque", "maxc.m6811@gmail.com","max123"); 
+  }
 
   ngOnInit() {
+    console.log(this.usuario);
+  }
+  login(e){
+    e.preventDefault();
+    var userName = e.target.elements[0].value;
+    var password = e.target.elements[1].value;
+    console.log(userName, password);
+    this.verificarTipoUsuario(userName,password);
+  }
+  verificarTipoUsuario(userName, password){
+    if(userName == "Max" && password == "max123"){
+      console.log("Este usuario es administrador");
+    }else{
+      console.log("Este usuario no es Administrador");
+    }
+
   }
 
 }
