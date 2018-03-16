@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from './user';
+import { User } from '../modelo/user';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +9,7 @@ import { User } from './user';
 export class LoginComponent implements OnInit {
 
   public usuario:User;
+  title = 'CECAP COMPANY';
 
   constructor() {   
       this.usuario = new User("Max","Choque", "maxc.m6811@gmail.com","max123"); 
@@ -32,5 +33,6 @@ export class LoginComponent implements OnInit {
     }
 
   }
+  
 
 }
