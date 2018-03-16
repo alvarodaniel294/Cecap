@@ -7,13 +7,23 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 //import { PrincipalComponent } from './principal/principal.component';
+///////
+import { AppheaderComponent } from './plantilla/appheader/appheader.component';
+import { AppfooterComponent } from './plantilla/appfooter/appfooter.component';
+import { AppmenuComponent } from './plantilla/appmenu/appmenu.component';
+import { AppsettingsComponent } from './plantilla/appsettings/appsettings.component';
 
+//////
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AppheaderComponent,
+    AppfooterComponent,
+    AppmenuComponent,
+    AppsettingsComponent
   ],
   imports: [
     BrowserModule,
