@@ -12,8 +12,13 @@ import { AppheaderComponent } from './plantilla/appheader/appheader.component';
 import { AppfooterComponent } from './plantilla/appfooter/appfooter.component';
 import { AppmenuComponent } from './plantilla/appmenu/appmenu.component';
 import { AppsettingsComponent } from './plantilla/appsettings/appsettings.component';
+import { PersonaComponent } from './registro/persona/persona.component';
+import { BaseComponent } from './registro/base/base.component';
 
 //////
+
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -23,11 +28,14 @@ import { AppsettingsComponent } from './plantilla/appsettings/appsettings.compon
     AppheaderComponent,
     AppfooterComponent,
     AppmenuComponent,
-    AppsettingsComponent
+    AppsettingsComponent,
+    PersonaComponent,
+    BaseComponent
   ],
   imports: [
     BrowserModule,
-    routing//aniadir routing
+    routing,//aniadir routing
+    HttpClientModule
 
   ],
   providers: [appRoutingProviders],//aniadir appRo..
