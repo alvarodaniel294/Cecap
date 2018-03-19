@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { FormsModule }   from '@angular/forms';
 import{ routing, appRoutingProviders } from './app.routing';
 
-
+//components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-//import { PrincipalComponent } from './principal/principal.component';
-///////
+
 import { AppheaderComponent } from './plantilla/appheader/appheader.component';
 import { AppfooterComponent } from './plantilla/appfooter/appfooter.component';
 import { AppmenuComponent } from './plantilla/appmenu/appmenu.component';
@@ -15,7 +16,9 @@ import { AppsettingsComponent } from './plantilla/appsettings/appsettings.compon
 import { PersonaComponent } from './registro/persona/persona.component';
 import { BaseComponent } from './registro/base/base.component';
 
-//////
+//Services
+import { UserService} from './services/user.service';
+
 
 import {HttpClientModule} from '@angular/common/http';
 
@@ -35,10 +38,18 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     routing,//aniadir routing
+<<<<<<< HEAD
     HttpClientModule
+=======
+    FormsModule,
+    HttpModule
+>>>>>>> 325c3c47e971becba46629b8c80cd25c0c8c3093
 
   ],
-  providers: [appRoutingProviders],//aniadir appRo..
+  providers: [
+    appRoutingProviders,
+    UserService
+  ],//aniadir appRo..
   bootstrap: [AppComponent]
 })
 export class AppModule { }
