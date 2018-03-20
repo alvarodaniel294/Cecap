@@ -25,6 +25,7 @@ import { UserService} from './services/user.service';
 
 import {HttpClientModule} from '@angular/common/http';
 import { FormComponent } from './registro/form/form.component';
+import { Form2Component } from './registro/form2/form2.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FormComponent } from './registro/form/form.component';
     PersonaComponent,
     BaseComponent,
     FormComponent,
-    ProgramaComponent
+    ProgramaComponent,
+    Form2Component
   ],
   imports: [
     BrowserModule,
