@@ -9,7 +9,14 @@ import { ProgramaComponent} from './programa/programa.component';
 const appRoutes: Routes = [
     {path: '', component: LoginComponent},//ruta basica
     {path: 'loginForm', component: LoginComponent},
-    {path: 'home', component: HomeComponent},
+    {path: 'home', component: HomeComponent,
+        children: [
+            {path: 'programa', component: ProgramaComponent},
+            {path: 'registro', component: BaseComponent}
+            
+        ]
+
+    },
     {path: 'registro' , component: BaseComponent},
     {path: 'programa', component: ProgramaComponent},
     
