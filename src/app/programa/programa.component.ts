@@ -7,25 +7,24 @@ import{ Programa } from '../modelo/programa';
   styleUrls: ['./programa.component.css']
 })
 export class ProgramaComponent implements OnInit {
-  public titulo = 'Listado de programas';
+  	public titulo = 'Listado de programas';
 	public programa:Programa;
 	public programasDef:Array<Programa>;
-  public eventoPrograma:boolean;
+  	public eventoPrograma:boolean;
   
   constructor() {
     this.programa = new Programa('Gestion de Calidad', 'la la la la la', true);
-		this.programasDef = [
-			new Programa('Plan de Negocios', 'Mas informacion del programa plan de negocios', false),
-			new Programa('Maketing y Ventas', 'Mas informacion del programa marketing y ventas', true),
-			new Programa('P. de RRHH', 'Mas informacion del programa RRHH', false)
-		];
+	this.programasDef = [
+		new Programa('Plan de Negocios', 'Mas informacion del programa plan de negocios', false),			new Programa('Maketing y Ventas', 'Mas informacion del programa marketing y ventas', true),
+		new Programa('P. de RRHH', 'Mas informacion del programa RRHH', false)
+	];
 		
-		this.eventoPrograma = true;
+	this.eventoPrograma = true;
    }
 
   ngOnInit() {
     console.log(this.programa);
-		console.log(this.programasDef);
+	console.log(this.programasDef);
   }
   
 	ver(valor){

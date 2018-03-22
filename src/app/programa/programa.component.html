@@ -17,11 +17,14 @@
 
   
   <section class="content">
+  	<app-form-programa></app-form-programa>
 
-		<app-form-programa></app-form-programa>
+	<div *ngIf="eventoPrograma == true">
+           <a href="#" class="btn btn-lg btn-primary" (click)="ver(false)">Ver programas</a>
+           <a href="#" class="btn btn-lg btn-success">Añadir programas</a>
 
-<h3>Listado de Programas</h3>
-	<ul>
+        <h3>Listado de Programas:</h3>
+        <ul>
 		<li *ngFor= "let programa of programasDef">
 			Programa:
 			<ul>
@@ -31,7 +34,8 @@
 				<li *ngIf="programa.activo == false">No esta activo</li>
 			</ul>
 		</li>
-	</ul> 
+		</ul> 
+   </div>
 
   </section>
 </div>
