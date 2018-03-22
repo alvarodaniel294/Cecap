@@ -1,0 +1,18 @@
+<div><section class="content">
+    <div *ngIf="eventoPrograma == true">
+          <h3>Listado de Programas Activos</h3>
+          <ul>
+      <li *ngFor= "let programa of programasDef">
+        Programa:
+        <ul>
+          <li>{{programa.nombre}}</li>
+          <li>{{programa.detalle}}</li>
+          <li *ngIf="programa.activo == true">Esta activo</li>
+          <li *ngIf="programa.activo == false">No esta activo</li>
+        </ul>
+      </li>
+      </ul> 
+    </div>
+
+</section>
+</div>

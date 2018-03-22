@@ -5,6 +5,8 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { BaseComponent } from './registro/base/base.component';
 import { ProgramaComponent} from './programa/programa.component';
+import { FormProgramaComponent } from './form-programa/form-programa.component';
+import { ProgramaActivosComponent } from './programa-activos/programa-activos.component';
 
 const appRoutes: Routes = [
     {path: '', component: LoginComponent},//ruta basica
@@ -12,14 +14,21 @@ const appRoutes: Routes = [
     {path: 'home', component: HomeComponent,
         children: [
             {path: 'home', redirectTo: 'home', pathMatch: 'full' },
-            {path: 'programa', component: ProgramaComponent},
+            {path: 'programa', component: ProgramaComponent,
+                children:[
+                    //{path: '', component: ProgramaActivosComponent},
+                    {path: 'activos', component: ProgramaActivosComponent},
+                    {path: 'aniadir', component: FormProgramaComponent}
+                ]
+            },
             {path: 'registro', component: BaseComponent}
             
         ]
-
     },
     {path: 'registro' , component: BaseComponent},
-    {path: 'programa', component: ProgramaComponent},
+    {path: 'programa', component: ProgramaComponent
+        
+    },
     
     //{path: '', component: LoginFormComponent}
     {path: '**', component: LoginComponent}//ruta redir
