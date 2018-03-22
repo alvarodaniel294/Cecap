@@ -11,6 +11,7 @@ const appRoutes: Routes = [
     {path: 'loginForm', component: LoginComponent},
     {path: 'home', component: HomeComponent,
         children: [
+            {path: 'home', redirectTo: 'home', pathMatch: 'full' },
             {path: 'programa', component: ProgramaComponent},
             {path: 'registro', component: BaseComponent}
             

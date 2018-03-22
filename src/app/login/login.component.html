@@ -12,7 +12,7 @@
       <form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="col-lg-7">
           <p>
             <label>Username</label>
-            <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="usuario.nombre" class=
+            <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="usuario.nombre" [(ngModel)]="nombreUser" class=
             "form-control" required />
             <span *ngIf="!nombre.valid && nombre.touched">
                 El nombre de usuario es obligatorio.
@@ -27,7 +27,8 @@
               </span>
             </p>  
           <!-- <input type="submit" value="LOGIN" [routerLink]="['/home']">-->
-          <input type="submit" value="LOGIN" class="btn btn-success" [routerLink]="['/home']" />
+         <input type="submit" value="LOGIN" class="btn btn-success" (click)="guardarSesion()" [routerLink]="['/home']" />
+         <!--<button (click)="guardarSesion">LOGIN</button>-->
         </form>
 <div style="text-align:left">
     
@@ -35,5 +36,6 @@
     CECAP Company: todos los derechos reservados.
   </h5>
 </div>
+
 
 
