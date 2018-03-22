@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppheaderComponent implements OnInit {
 
+  public nombreUser:string;//variable de sesion de usuario
+
   constructor() { }
 
   ngOnInit() {
+    //obteniendo sesion de usuario del localStorage
+    this.nombreUser = localStorage.getItem('nombreUser');
+    //console.log(localStorage.getItem('nombreUser'));
   }
 
 }
