@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
   public identity; //para guardar la identificacion
   public token;
   public status:string;
+  public nombreUser:string;
 
     constructor(
       private _route: ActivatedRoute,
@@ -77,7 +78,7 @@ export class LoginComponent implements OnInit {
       this.verificarTipoUsuario(userName,password);
     }
     verificarTipoUsuario(userName, password){
-      if(userName == "Max" && password == "max123"){
+      if(userName == "max" && password == "max123"){
         console.log("Este usuario es administrador");
       }else{
         console.log("Este usuario no es Administrador");
@@ -85,5 +86,8 @@ export class LoginComponent implements OnInit {
 
     }
   
-
+    guardarSesion(){
+      localStorage.setItem('nombreUser',this.nombreUser);//modifica en el localStorage 
+      console.log(localStorage.getItem('nombreUser'));//obtiene el dato del localStorage
+    }
 }
