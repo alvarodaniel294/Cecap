@@ -1,5 +1,6 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { FilterPipe } from "./app/registro/base/filter.pipe";
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';

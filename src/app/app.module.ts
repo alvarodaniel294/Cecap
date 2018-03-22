@@ -30,6 +30,9 @@ import { Form2Component } from './registro/form2/form2.component';
 
 import { FormProgramaComponent } from './form-programa/form-programa.component';
 
+////////pipes/////
+import { FilterPipe } from "./registro/base/filter.pipe";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +50,8 @@ import { FormProgramaComponent } from './form-programa/form-programa.component';
     Form2Component,
 
     FormProgramaComponent,
+    FilterPipe,
+
   ],
   imports: [
     BrowserModule,
@@ -58,7 +63,8 @@ import { FormProgramaComponent } from './form-programa/form-programa.component';
   ],
   providers: [
     appRoutingProviders,
-    UserService
+    UserService,
+    FilterPipe
   ],//aniadir appRo..
   bootstrap: [AppComponent]
 })
