@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import{ Programa } from '../modelo/programa';
 
+import { ProgramaActivosComponent } from '../programa-activos/programa-activos.component';
+
 @Component({
   selector: 'app-programa',
   templateUrl: './programa.component.html',

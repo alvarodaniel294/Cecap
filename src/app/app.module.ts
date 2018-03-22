@@ -29,6 +29,7 @@ import { FormComponent } from './registro/form/form.component';
 import { Form2Component } from './registro/form2/form2.component';
 
 import { FormProgramaComponent } from './form-programa/form-programa.component';
+import { ProgramaActivosComponent } from './programa-activos/programa-activos.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,8 @@ import { FormProgramaComponent } from './form-programa/form-programa.component';
     Form2Component,
 
     FormProgramaComponent,
+
+    ProgramaActivosComponent,
   ],
   imports: [
     BrowserModule,
