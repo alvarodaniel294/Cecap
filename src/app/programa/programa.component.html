@@ -4,28 +4,13 @@
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <!--<section class="content-header">-->
-    <section class="header">
+  <section class="header">
     <ul class="breadcrumb">
       <li><a  class="btn btn-lg btn-primary" (click)="ver(false)">Ver programas</a></li>
-      <li><a [routerLink]="['/home/programa/aniadir']" class="btn btn-lg btn-success">Añadir programas</a></li>
-		</ul>
-  </section>
-  <!--<section class="content">
-      <div *ngIf="eventoPrograma == true">
-            <h3>Listado de Programas Activos</h3>
-            <ul>
-        <li *ngFor= "let programa of programasDef">
-          Programa:
-          <ul>
-            <li>{{programa.nombre}}</li>
-            <li>{{programa.detalle}}</li>
-            <li *ngIf="programa.activo == true">Esta activo</li>
-            <li *ngIf="programa.activo == false">No esta activo</li>
-          </ul>
-        </li>
-        </ul> 
-      </div>
-
-  </section>-->
+      <li><a [routerLink]="['/home/programa/aniadir']" class="btn btn-lg btn-success">
+        <span class="glyphicon glyphicon-plus"> AñadirProgramas</span></a>
+      </li>
+    </ul>
+  </section>      
   <router-outlet></router-outlet>
 </div>

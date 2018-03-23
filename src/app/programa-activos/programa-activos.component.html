@@ -1,18 +1,70 @@
-<div><section class="content">
-    <div *ngIf="eventoPrograma == true">
-          <h3>Listado de Programas Activos</h3>
-          <ul>
-      <li *ngFor= "let programa of programasDef">
-        Programa:
-        <ul>
-          <li>{{programa.nombre}}</li>
-          <li>{{programa.detalle}}</li>
-          <li *ngIf="programa.activo == true">Esta activo</li>
-          <li *ngIf="programa.activo == false">No esta activo</li>
-        </ul>
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <!--<section class="content-header">-->
+  <section class="header">
+    <ul class="breadcrumb">
+      <li><a  class="btn btn-lg btn-primary" (click)="ver(false)">Ver programas</a></li>
+      <li><a [routerLink]="['/home/programa/aniadir']" class="btn btn-lg btn-success">
+        <span class="glyphicon glyphicon-plus"> AñadirProgramas</span></a>
       </li>
-      </ul> 
-    </div>
+    </ul>
+  </section>
+  <!--<section class="content">
+      <div *ngIf="eventoPrograma == true">
+            <h3>Listado de Programas Activos</h3>
+            <ul>
+        <li *ngFor= "let programa of programasDef">
+          Programa:
+          <ul>
+            <li>{{programa.nombre}}</li>
+            <li>{{programa.detalle}}</li>
+            <li *ngIf="programa.activo == true">Esta activo</li>
+            <li *ngIf="programa.activo == false">No esta activo</li>
+          </ul>
+        </li>
+        </ul> 
+      </div>
 
+  </section>-->
+  <section class="content">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">programa 1</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">programa 2</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">programa 3</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">programa 4</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 </div>
