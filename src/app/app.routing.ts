@@ -14,6 +14,7 @@ const appRoutes: Routes = [
     {path: 'home', component: HomeComponent,
         children: [
             {path: 'home', redirectTo: 'home', pathMatch: 'full' },
+            {path: 'programa', component: ProgramaActivosComponent},
             {path: 'programa', component: ProgramaComponent,
                 children:[
                     //{path: '', component: ProgramaActivosComponent},
