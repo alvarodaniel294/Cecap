@@ -6,9 +6,10 @@
   <!--<section class="content-header">-->
   <section class="header">
     <ul class="breadcrumb">
-      <li><a  class="btn btn-lg btn-primary" (click)="ver(false)">Ver programas</a></li>
+      <li><a [routerLink]="['/home/programa/activos']" class="btn btn-lg btn-primary">Ver Programas Activos</a>
+      </li>
       <li><a [routerLink]="['/home/programa/aniadir']" class="btn btn-lg btn-success">
-        <span class="glyphicon glyphicon-plus"> AñadirProgramas</span></a>
+        <span class="glyphicon glyphicon-plus">Añadir Programas</span></a>
       </li>
     </ul>
   </section>      
